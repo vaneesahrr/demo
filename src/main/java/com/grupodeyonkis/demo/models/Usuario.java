@@ -2,6 +2,7 @@ package com.grupodeyonkis.demo.models;
 
 public class Usuario {
 
+    private Long id;
     private String nombre;
     private String apellido;
     private String email;
@@ -10,6 +11,14 @@ public class Usuario {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setNombre(String nombre) {
