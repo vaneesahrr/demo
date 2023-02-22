@@ -8,7 +8,7 @@ async function iniciarSesion() {
   datos.email = document.getElementById('txtEmail').value;
   datos.password = document.getElementById('txtPassword').value;
 
-  const request = await fetch('api/usuarios', {
+  const request = await fetch('api/login', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -16,7 +16,7 @@ async function iniciarSesion() {
     },
     body: JSON.stringify(datos)
   });
-  const respuesta = await request.txt();
+  const respuesta = await request.text();
   if (respuesta == 'OK') {
     window.location.href = 'usuarios.html'
   } else {
